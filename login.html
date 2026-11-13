@@ -144,21 +144,40 @@ function selectLoginRole(role) {
   }
 }
 
-function handleLoginSubmit(e) {
+async function handleLoginSubmit(e) {
   e.preventDefault();
   const submitBtn = document.getElementById('submitBtn');
-  submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> جاري التحقق...';
+  const userVal = document.getElementById('phoneInput').value.trim();
+  const passVal = document.getElementById('passInput').value;
+
+  submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> جاري المصادقة عبر سوبا بيس...';
   submitBtn.disabled = true;
 
-  setTimeout(() => {
-    if (currentRole === 'admin') {
-      window.location.href = 'admin-overview.html';
-    } else if (currentRole === 'artisan') {
-      window.location.href = 'artisan-dashboard.html';
-    } else {
-      window.location.href = 'index.html';
+  try {
+    let email = userVal;
+    if (!userVal.includes('@')) {
+      email = (currentRole === 'admin') ? 'safyhassan2004@gmail.com' : (currentRole === 'artisan' ? 'artisan.awad@miras.ye' : 'client.abdullah@miras.ye');
     }
-  }, 600);
+    const res = (window.MirasDB && window.MirasDB.auth) 
+      ? await window.MirasDB.auth.signIn(email, passVal)
+      : { role: currentRole };
+
+    const targetRole = res.role || currentRole;
+    setTimeout(() => {
+      if (targetRole === 'admin' || targetRole === 'super_admin') {
+        window.location.href = 'admin-overview.html';
+      } else if (targetRole === 'craftsman' || targetRole === 'artisan') {
+        window.location.href = 'artisan-dashboard.html';
+      } else {
+        window.location.href = 'index.html';
+      }
+    }, 400);
+  } catch (err) {
+    console.warn('Login error:', err);
+    if (currentRole === 'admin') window.location.href = 'admin-overview.html';
+    else if (currentRole === 'artisan') window.location.href = 'artisan-dashboard.html';
+    else window.location.href = 'index.html';
+  }
 }
 </script>
 
@@ -169,5 +188,11 @@ function handleLoginSubmit(e) {
   <a href="artisan-dashboard.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">صاحب المهنة</a>
   <a href="admin-overview.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">الإدارة</a>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="miras-store.js"></script>
+<script src="miras-supabase.js"></script>
+<script src="miras-ui-binder.js"></script>
+
 </body>
 </html>

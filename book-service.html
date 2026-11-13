@@ -259,15 +259,36 @@
 
     const submitBtn = document.getElementById('submit-order-btn');
     if (submitBtn) {
-      
-      submitBtn.addEventListener('click', function() {
-        this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span> جاري إرسال الطلب...';
+      submitBtn.addEventListener('click', async function() {
+        this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span> جاري الحفظ في سوبا بيس وحجز الضمان...';
         this.classList.add('opacity-90');
+        this.disabled = true;
+
+        const notes = document.getElementById('problem-notes') ? document.getElementById('problem-notes').value : '';
+        const activeChip = document.querySelector('#city-chips button.bg-primary');
+        const cityText = activeChip ? activeChip.textContent.trim() : 'المكلا';
+
+        let newOrder = null;
+        try {
+          if (window.MirasDB) {
+            newOrder = await window.MirasDB.createOrder({
+              serviceTitle: 'صيانة مكيف سبلت وتعبئة فريون أصلي',
+              serviceCategory: 'التكييف والتبريد المعتمد',
+              artisanName: 'المعلم سعيد بن مخاشن',
+              location: 'حضرموت، ' + cityText + ' - حي فُوّة',
+              price: 18000,
+              notes: notes || 'صيانة مكيف سبلت وتعبئة فريون أصلي مع الفحص الشامل.'
+            });
+          }
+        } catch (e) {
+          console.warn('Order create error:', e);
+        }
+
         setTimeout(() => {
-          window.location.href = 'order-details.html';
-        }, 600);
+          const targetUrl = newOrder ? ('order-details.html?id=' + encodeURIComponent(newOrder.id)) : 'order-details.html';
+          window.location.href = targetUrl;
+        }, 500);
       });
-    
     }
   })();
 </script></main>
@@ -278,4 +299,10 @@
   <a href="artisan-dashboard.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">صاحب المهنة</a>
   <a href="admin-overview.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">الإدارة</a>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="miras-store.js"></script>
+<script src="miras-supabase.js"></script>
+<script src="miras-ui-binder.js"></script>
+
 </body></html>

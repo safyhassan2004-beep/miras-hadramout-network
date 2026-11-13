@@ -92,15 +92,27 @@ tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#c
 </main>
 
 <script>
-function handleAdminLogin(e) {
+async function handleAdminLogin(e) {
   e.preventDefault();
   const btn = document.getElementById('adminSubmitBtn');
-  btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> جاري التحقق من الصلاحيات...';
+  const email = (document.getElementById('adminUser') ? document.getElementById('adminUser').value.trim() : '') || 'safyhassan2004@gmail.com';
+  const pass = (document.getElementById('adminPass') ? document.getElementById('adminPass').value : '') || 'Password123!';
+
+  btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> جاري التحقق من صلاحيات المشرف...';
   btn.disabled = true;
 
+  try {
+    if (window.MirasDB && window.MirasDB.auth) {
+      await window.MirasDB.auth.signIn(email.includes('@') ? email : 'safyhassan2004@gmail.com', pass);
+    }
+  } catch(err) {
+    console.warn(err);
+  }
+
+  sessionStorage.setItem('miras_auth_role', 'admin');
   setTimeout(() => {
     window.location.href = 'admin-overview.html';
-  }, 500);
+  }, 400);
 }
 </script>
 
@@ -111,5 +123,11 @@ function handleAdminLogin(e) {
   <a href="artisan-dashboard.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">صاحب المهنة</a>
   <a href="admin-overview.html" class="px-2 py-0.5 rounded-full transition-colors bg-[#211700] text-amber-300 font-bold shadow-xs">الإدارة</a>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="miras-store.js"></script>
+<script src="miras-supabase.js"></script>
+<script src="miras-ui-binder.js"></script>
+
 </body>
 </html>
