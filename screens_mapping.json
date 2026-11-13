@@ -1,0 +1,112 @@
+{
+  "672458a3d3bd49a5aa31ca462bb1db1c": {
+    "name": "index.html",
+    "role": "client",
+    "title": "الرئيسية"
+  },
+  "b622aa8ebdaa4baeb2d8e6030a2faaae": {
+    "name": "explore.html",
+    "role": "client",
+    "title": "استكشاف المهن"
+  },
+  "dd43fd5452464c129b7783a66953bc23": {
+    "name": "artisan-profile.html",
+    "role": "client",
+    "title": "الملف الشخصي للمهني"
+  },
+  "db5301e66c464003a6c081243e7b96fe": {
+    "name": "service-details.html",
+    "role": "client",
+    "title": "تفاصيل الخدمة"
+  },
+  "70c643b0c360466c96374b5ae64c540b": {
+    "name": "book-service.html",
+    "role": "client",
+    "title": "طلب وحجز خدمة"
+  },
+  "7753031754074e05ae84a720e87afcf9": {
+    "name": "client-orders.html",
+    "role": "client",
+    "title": "طلباتي"
+  },
+  "47f6d11e8403421d87005c03eadacd21": {
+    "name": "order-details.html",
+    "role": "client",
+    "title": "تفاصيل الطلب والفاتورة"
+  },
+  "f109e50277954ba8b47b728ce21fc2e9": {
+    "name": "favorites.html",
+    "role": "client",
+    "title": "المفضلة"
+  },
+  "6a61aade3f604909836e4cd5991f3768": {
+    "name": "chat.html",
+    "role": "client",
+    "title": "المحادثة"
+  },
+  "dae8b3f02d3a411eaabe2748234f86a6": {
+    "name": "review.html",
+    "role": "client",
+    "title": "تقييم الخدمة والمهني"
+  },
+  "510f654069eb43b2bfd20867ed1c0ec0": {
+    "name": "review-confirmation.html",
+    "role": "client",
+    "title": "تأكيد التقييم"
+  },
+  "86de102dee674df1836661f5f6df282d": {
+    "name": "client-profile.html",
+    "role": "client",
+    "title": "حسابي والإعدادات"
+  },
+  "e80e7d560cac4dcdaa217888d2a6680d": {
+    "name": "support.html",
+    "role": "client",
+    "title": "الدعم والمساندة الحضرمية"
+  },
+  "6ed4b132b14a41148520553a4b450de8": {
+    "name": "auth-choose-role.html",
+    "role": "auth",
+    "title": "اختيار نوع الحساب"
+  },
+  "25fa4c04aecb4f48a8fd8451c1d679fc": {
+    "name": "register-client.html",
+    "role": "auth",
+    "title": "تسجيل حساب عميل"
+  },
+  "0a1ce818a7544d188718d5b32c930893": {
+    "name": "register-artisan.html",
+    "role": "auth",
+    "title": "تسجيل صاحب مهنة"
+  },
+  "4fc7663c54874eb691bf58c9d051a8bd": {
+    "name": "verify-otp.html",
+    "role": "auth",
+    "title": "التحقق من الهاتف"
+  },
+  "816c186062ba4900a438be804e434f2c": {
+    "name": "artisan-dashboard.html",
+    "role": "artisan",
+    "title": "لوحة تحكم صاحب المهنة"
+  },
+  "6a3ca2e4c0e04af08a1f2f4cbef3ea2e": {
+    "name": "admin-overview.html",
+    "role": "admin",
+    "title": "لوحة الإدارة - النظرة العامة"
+  },
+  "1445aab77a684281acdcd36d30534067": {
+    "name": "admin-artisans.html",
+    "role": "admin",
+    "title": "لوحة الإدارة - توثيق وإدارة أصحاب المهن"
+  },
+  "5b34884582c742cdaa7cf9c927828778": {
+    "name": "admin-orders.html",
+    "role": "admin",
+    "title": "لوحة الإدارة - متابعة الطلبات والنزاعات"
+  },
+  "103dd7c869fc44168973ab847cb1a73e": {
+    "name": "admin-settings.html",
+    "role": "admin",
+    "title": "لوحة الإدارة - الإعدادات والتصنيفات والرقابة"
+  }
+}

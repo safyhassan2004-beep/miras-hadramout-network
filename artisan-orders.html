@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<title>طلبات العمل الواردة - لوحة المهني - منصة مِراس حضرموت</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { width: 100vw; margin: 0; padding: 0; font-family: 'IBM Plex Sans Arabic', sans-serif; }
+  body { overscroll-behavior: none; }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#c4c6d0","on-surface":"#0b1c30","tertiary-fixed":"#ffdf98","on-secondary-container":"#00217a","on-secondary-fixed":"#001453","on-tertiary-container":"#b78f19","error-container":"#ffdad6","primary-fixed":"#d8e2ff","surface-container-highest":"#d3e4fe","surface-container-high":"#dce9ff","on-tertiary":"#ffffff","secondary-container":"#708cfd","primary":"#00173b","inverse-surface":"#213145","on-secondary":"#ffffff","inverse-primary":"#aec7fd","on-secondary-fixed-variant":"#173bab","on-primary":"#ffffff","surface":"#f8f9ff","secondary-fixed":"#dde1ff","outline":"#747780","on-surface-variant":"#44474f","on-error":"#ffffff","tertiary":"#211700","surface-container-low":"#eff4ff","surface-container":"#e5eeff","on-tertiary-fixed":"#251a00","surface-variant":"#d3e4fe","secondary":"#3755c3","inverse-on-surface":"#eaf1ff","primary-container":"#0f2c59","background":"#f8f9ff","on-primary-fixed":"#001a41","on-primary-container":"#7c94c8","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#5a4300","secondary-fixed-dim":"#b8c4ff","on-error-container":"#93000a","surface-bright":"#f8f9ff","tertiary-container":"#3a2b00","error":"#ba1a1a","on-primary-fixed-variant":"#2d4674","tertiary-fixed-dim":"#eec14b","on-background":"#0b1c30","primary-fixed-dim":"#aec7fd","surface-tint":"#465e8e"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin-desktop":"2.5rem","gutter":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem"},"fontFamily":{"body-lg":["IBM Plex Sans Arabic"],"display":["IBM Plex Sans Arabic"],"label-sm":["IBM Plex Sans Arabic"],"body-sm":["IBM Plex Sans Arabic"],"headline-md":["IBM Plex Sans Arabic"],"headline-lg-mobile":["IBM Plex Sans Arabic"],"body-md":["IBM Plex Sans Arabic"],"label-lg":["IBM Plex Sans Arabic"],"label-md":["IBM Plex Sans Arabic"],"headline-sm":["IBM Plex Sans Arabic"],"display-mobile":["IBM Plex Sans Arabic"],"headline-lg":["IBM Plex Sans Arabic"]},"fontSize":{"body-lg":["1.0625rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"display":["3rem",{"lineHeight":"3.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"1rem","fontWeight":"500"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-md":["1.375rem",{"lineHeight":"1.875rem","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"700"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-lg":["0.9375rem",{"lineHeight":"1.25rem","fontWeight":"600"}],"label-md":["0.8125rem",{"lineHeight":"1.125rem","fontWeight":"500"}],"headline-sm":["1.125rem",{"lineHeight":"1.625rem","fontWeight":"600"}],"display-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","fontWeight":"700"}]}}}}
+</script>
+
+
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,44,89,0.05)] pt-safe">
+  <div class="h-16 px-margin flex items-center justify-between gap-space-sm">
+    <div class="flex items-center gap-space-sm">
+      <div class="w-10 h-10 rounded-xl bg-primary-container text-tertiary-fixed flex items-center justify-center shadow-sm">
+        <span class="material-symbols-outlined text-[22px]">engineering</span>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-1">
+          <span class="font-headline-sm text-headline-sm text-primary font-bold">طلبات العمل</span>
+          <span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-primary px-1.5 py-0.2 rounded-full">المهني</span>
+        </div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">المعلم عوض بن حريز • المكلا</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <a href="index.html" class="px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors flex items-center gap-1">
+        <span class="material-symbols-outlined text-[16px]">visibility</span>
+        <span>عرض كعميل</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen">
+  <div class="flex flex-col w-full px-margin pb-8">
+    <!-- Filter Tabs -->
+    <div class="my-space-md bg-surface-container-low p-1 rounded-xl flex items-center gap-1 shadow-inner">
+      <button onclick="filterArtisanOrders('new')" id="tab-new" class="flex-1 py-2 rounded-lg font-label-md text-label-md font-bold bg-primary text-on-primary shadow-sm transition-all flex items-center justify-center gap-1">
+        <span>واردة جديدة</span>
+        <span class="w-5 h-5 rounded-full bg-secondary text-white text-[11px] font-bold flex items-center justify-center">2</span>
+      </button>
+      <button onclick="filterArtisanOrders('ongoing')" id="tab-ongoing" class="flex-1 py-2 rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-primary transition-all flex items-center justify-center gap-1">
+        <span>قيد التنفيذ</span>
+        <span class="w-5 h-5 rounded-full bg-surface-container text-on-surface text-[11px] font-bold flex items-center justify-center">1</span>
+      </button>
+      <button onclick="filterArtisanOrders('completed')" id="tab-completed" class="flex-1 py-2 rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-primary transition-all flex items-center justify-center gap-1">
+        <span>المكتملة</span>
+      </button>
+    </div>
+
+    <!-- Orders Stack -->
+    <div class="flex flex-col gap-3.5" id="ordersList">
+      <!-- Order 1: New Request -->
+      <div class="order-card order-new bg-surface-container-lowest rounded-2xl p-space-md shadow-sm border border-secondary/20">
+        <div class="flex items-start justify-between gap-2 mb-2.5">
+          <div class="flex items-center gap-2">
+            <span class="w-9 h-9 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">notification_important</span>
+            </span>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h3 class="font-headline-sm text-headline-sm text-primary font-bold">طلب صيانة وتركيب جديد</h3>
+                <span class="px-2 py-0.5 rounded-full bg-secondary text-white font-label-sm text-[11px] font-bold">عاجل</span>
+              </div>
+              <span class="font-body-sm text-[12px] text-on-surface-variant">العميل: سالم صالح باوزير • المكلا (حي فُوّة)</span>
+            </div>
+          </div>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-mono">منذ 15 دقيقة</span>
+        </div>
+
+        <div class="bg-surface-container-low rounded-xl p-3 mb-3 text-on-surface text-right">
+          <p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            "نحتاج فحص وصيانة مكيفين سبلت تنقط ماء في الصالة وغرفة النوم الرئيسية، وتعبئة فريون أصلي قبل قدوم الضيوف غداً."
+          </p>
+          <div class="mt-2 pt-2 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+            <span>التسعيرة المقترحة للكشف: <strong class="text-primary font-bold font-mono">18,000 ر.ي</strong></span>
+            <span class="text-secondary font-medium flex items-center gap-0.5">
+              <span class="material-symbols-outlined text-[14px]">location_on</span>
+              <span>يبعد عنك 2.4 كم</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a href="chat.html" class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors shrink-0" title="محادثة العميل">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+          </a>
+          <button onclick="acceptOrder(this)" class="flex-1 h-11 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-sm hover:bg-primary-container active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[18px]">check</span>
+            <span>قبول الطلب والتوجه للموقع</span>
+          </button>
+          <button onclick="rejectOrder(this)" class="px-3 h-11 rounded-xl bg-surface-container-low text-error font-label-md text-label-md font-semibold hover:bg-error-container/40 transition-colors">
+            اعتذار
+          </button>
+        </div>
+      </div>
+
+      <!-- Order 2: Ongoing Job -->
+      <div class="order-card order-ongoing bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+        <div class="flex items-start justify-between gap-2 mb-2.5">
+          <div class="flex items-center gap-2">
+            <span class="w-9 h-9 rounded-xl bg-tertiary-fixed text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">construction</span>
+            </span>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h3 class="font-headline-sm text-headline-sm text-primary font-bold">بناء وتجهيز ديكور حضرمي</h3>
+                <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-[11px] font-bold">جاري التنفيذ</span>
+              </div>
+              <span class="font-body-sm text-[12px] text-on-surface-variant">العميل: المهندس خالد بكران • المكلا (الديس)</span>
+            </div>
+          </div>
+          <span class="font-label-sm text-label-sm text-primary font-bold font-mono">45,000 ر.ي</span>
+        </div>
+
+        <div class="flex items-center justify-between bg-surface-container-low rounded-xl p-2.5 mb-3 text-on-surface-variant font-label-sm text-label-sm">
+          <span>المرحلة الحالية: توريد المواد والبدء في التشطيب</span>
+          <span class="text-secondary font-bold">نسبة الإنجاز: 65%</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a href="chat.html" class="flex-1 h-10 rounded-xl bg-surface-container text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span>محادثة العميل</span>
+          </a>
+          <button onclick="finishJob(this)" class="flex-1 h-10 rounded-xl bg-emerald-600 text-white font-label-md text-label-md font-bold flex items-center justify-center gap-1 shadow-sm hover:bg-emerald-700 active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span>إنهاء وتسليم العمل</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Artisan Bottom Nav -->
+<nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,44,89,0.06)]">
+  <div class="flex justify-around items-center h-16 px-space-xs">
+    <a href="artisan-dashboard.html" class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[24px]">dashboard</span>
+      <span class="font-label-sm text-label-sm">الرئيسية</span>
+    </a>
+    <a href="artisan-orders.html" class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-primary font-bold transition-colors">
+      <span class="material-symbols-outlined text-[24px]">assignment</span>
+      <span class="font-label-sm text-label-sm">طلبات العمل</span>
+    </a>
+    <a href="artisan-wallet.html" class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+      <span class="font-label-sm text-label-sm">المحفظة</span>
+    </a>
+    <a href="artisan-portfolio.html" class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[24px]">photo_library</span>
+      <span class="font-label-sm text-label-sm">أعمالي</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+function filterArtisanOrders(tab) {
+  ['new', 'ongoing', 'completed'].forEach(t => {
+    const btn = document.getElementById('tab-' + t);
+    if (t === tab) {
+      btn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-bold bg-primary text-on-primary shadow-sm transition-all flex items-center justify-center gap-1';
+    } else {
+      btn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-primary transition-all flex items-center justify-center gap-1';
+    }
+  });
+
+  const cards = document.querySelectorAll('.order-card');
+  cards.forEach(card => {
+    if (tab === 'completed') {
+      card.style.display = 'none';
+    } else if (tab === 'new') {
+      card.style.display = card.classList.contains('order-new') ? 'block' : 'none';
+    } else if (tab === 'ongoing') {
+      card.style.display = card.classList.contains('order-ongoing') ? 'block' : 'none';
+    }
+  });
+}
+
+function acceptOrder(btn) {
+  btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span> تم قبول الطلب!';
+  btn.className = 'flex-1 h-11 rounded-xl bg-emerald-600 text-white font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-sm';
+  setTimeout(() => {
+    alert('تم تأكيد قبول الطلب! يمكنك الآن التواصل مع العميل وتحديد مسار الوصول.');
+  }, 300);
+}
+
+function rejectOrder(btn) {
+  if (confirm('هل أنت متأكد من الاعتذار عن هذا الطلب؟')) {
+    btn.closest('.order-card').remove();
+  }
+}
+
+function finishJob(btn) {
+  btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> تم التسليم بنجاح ✓';
+  setTimeout(() => {
+    window.location.href = 'artisan-wallet.html';
+  }, 500);
+}
+</script>
+
+<!-- Floating Universal Portal Switcher Widget -->
+<div id="portal-quick-switcher" class="fixed top-3 left-3 z-[9999] bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 shadow-xl rounded-full px-2.5 py-1 flex items-center gap-1.5 text-[12px]">
+  <span class="material-symbols-outlined text-[16px] text-amber-600">swap_horiz</span>
+  <a href="index.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">العميل</a>
+  <a href="artisan-dashboard.html" class="px-2 py-0.5 rounded-full transition-colors bg-[#1e40af] text-white font-bold shadow-xs">صاحب المهنة</a>
+  <a href="admin-overview.html" class="px-2 py-0.5 rounded-full transition-colors text-slate-700 hover:bg-slate-100">الإدارة</a>
+</div>
+</body>
+</html>
